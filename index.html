@@ -981,38 +981,37 @@
                <!-- authen signin-->
             <div class="auth-form modal_form" id="modal_form-sigin">
               <div class="auth-form__container">
-                  <div class="auth-form__header">
-                      <h3 class="auth-form__heading" >Đăng Ký</h3>
-                      <div class="auth-form__switch-btn" id="next_form_login">Đăng nhập</div>
-                  </div>
-                  <div class="auth-form__form">
-                      <div class="auth-form__group">
-                          <input type="text" placeholder="Số điện thoại"
-                              class="auth-form__input">
-                      </div>
-                      <div class="auth-form__group">
-                          <input type="password" placeholder="Mật khẩu"
-                              class="auth-form__input">
-                      </div>
-                      <div class="auth-form__group">
-                          <input type="password"
-                              placeholder="Nhập lại mật khẩu"
-                              class="auth-form__input">
-                      </div>
-                  </div>
-                  <div class="auth-form__policy">
-                      <p class="auth-form__policy-text">
-                          Bằng việc đăng ký, bạn đồng ý với Shoppee về
-                          <a href="#" class="auth-form__text-link">Điều khoản
-                              dịch vụ</a> &
-                          <a href="#" class="auth-form__text-link">Chính sách
-                              bảo mật</a>
-                      </p>
-                  </div>
-                  <div class="auth-form__control">
-                      <button type="button" class="btn auth-form__back">TRỞ LẠI</button>
-                      <button type="submit" class="btn btn--primary" id="register_succsess">ĐĂNG KÝ</button>
-                  </div>
+                  <form action="#" id="form-register">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading" >Đăng Ký</h3>
+                        <div class="auth-form__switch-btn" id="next_form_login">Đăng nhập</div>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                                <input type="text" placeholder="Số điện thoại" id="phone-reg"  class="auth-form__input">
+                                <div class="error-message" id="phone-error"></div>
+                        </div>
+                        <div class="auth-form__group">
+                                <input type="password" placeholder="Mật khẩu" id="password-reg" class="auth-form__input">
+                                <div class="error-message" id="password-error"></div>
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password"  placeholder="Nhập lại mật khẩu"  id="re-password"  class="auth-form__input">
+                            <div class="error-message" id="repassword_error"></div>
+                        </div>
+                    </div>
+                    <div class="auth-form__policy">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng ký, bạn đồng ý với Shoppee về
+                            <a href="#" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                            <a href="#" class="auth-form__text-link">Chính sách  bảo mật</a>
+                        </p>
+                    </div>
+                    <div class="auth-form__control">
+                        <button type="button" class="btn auth-form__back">TRỞ LẠI</button>
+                        <button type="submit" class="btn btn--primary" id="register_succsess" >ĐĂNG KÝ</button>
+                    </div>
+                  </form>
               </div>
               <div class="auth-form__signin">
                   <a href="#" class="btn btn-signin auth-form__signin-fb">
@@ -1034,26 +1033,30 @@
           <div class="auth-form  modal_form"  id="modal_form-login">
               <div class="auth-form__container">
                   <div class="auth-form__header">
-                      <h3 class="auth-form__heading">Đăng Nhập</h3>
+                      <h3 class="auth-form__heading  ">Đăng Nhập</h3>
                       <div class="auth-form__switch-btn" id="next_form_reg">Đăng ký</div>
                   </div>
-                  <div class="auth-form__form">
-                      <div class="auth-form__group">
-                          <input type="text" placeholder="Số điện thoại" class="auth-form__input">
-                      </div>
-                      <div class="auth-form__group">
-                          <input type="password" placeholder="Mật khẩu" class="auth-form__input">
-                      </div>
-                  </div>
-                  <div class="auth-form__help">
-                      <a href="#" class="auth-form__help-link auth-form__help-forgot">Quên Mật Khẩu</a>
-                      <div class="auth-form__help--separate"></div>
-                      <a href="#" class="auth-form__help-link">Cần trợ giúp?</a>
-                  </div>
-                  <div class="auth-form__control">
-                      <button type="button" class="btn auth-form__back">TRỞ LẠI</button>
-                      <button type="submit" class="btn btn--primary" id="login_succsess">ĐĂNG NHẬP</button>
-                  </div>
+                  <form action="#" id="form_login">
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" placeholder="Số điện thoại" id="phone" class="auth-form__input">
+                            <div class="error-message" id="phone_error"></div>
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" placeholder="Mật khẩu" id="password" class="auth-form__input">
+                            <div class="error-message" id="password_error"></div>
+                        </div>
+                    </div>
+                    <div class="auth-form__help">
+                        <a href="#" class="auth-form__help-link auth-form__help-forgot">Quên Mật Khẩu</a>
+                        <div class="auth-form__help--separate"></div>
+                        <a href="#" class="auth-form__help-link">Cần trợ giúp?</a>
+                    </div>
+                    <div class="auth-form__control">
+                        <button type="button" class="btn auth-form__back">TRỞ LẠI</button>
+                        <button type="submit" class="btn btn--primary" id="login_succsess">ĐĂNG NHẬP</button>
+                    </div>
+                  </form>
               </div>
 
               <div class="auth-form__signin">

@@ -179,3 +179,10 @@ html {
     cursor: default;
     box-shadow: none;
 }
+
+
+.error-message  {
+    color: #ee4d2d;
+    padding: 5px 0;
+    font-size: 1.2rem;
+}
