@@ -194,16 +194,16 @@
                             <li
                                 class="header__nav-item header__nav-item--bold header__nav-item--separate"
                                 id="click_register_user">
-                                <a href="#" class="header__nav-item-link"
-                                    id="register_user">Đăng ký</a>
+                                <button type="submit"  class="header__nav-item-link"
+                                    id="register_user">Đăng ký</button>
                             </li>
                             <li class="header__nav-item header__nav-item--bold"
                                 id="click_login_user">
-                                <a href="#" class="header__nav-item-link"
-                                    id="login_user">Đăng nhập</a>
+                                <button type="submit"  class="header__nav-item-link"
+                                    id="login_user">Đăng nhập</button>
                             </li>
 
-                            <li class="header__nav-item header__nav-user">
+                            <li class="header__nav-item header__nav-user" id="user_login">
                                 <img src="./assets/img/user.png"
                                     class="header__nav-user-avt">
                                 <a href="#"
@@ -211,13 +211,13 @@
                                     Ngoc Hưng</a>
                                 <ul class="header__nav-user-menu">
                                     <li class="header__nav-user-item">
-                                        <a href="#">Tài khoản của tôi</a>
+                                        <button type="submit" >Tài khoản của tôi</button>
                                     </li>
                                     <li class="header__nav-user-item">
                                         <a href="#">Đơn mua</a>
                                     </li>
                                     <li class="header__nav-user-item">
-                                        <a href="#">Đăng xuất</a>
+                                        <button type="submit">Đăng xuất</button>
                                     </li>
                                 </ul>
                             </li>
@@ -977,112 +977,112 @@
         </div>
         <!-- modal -->
         <div class="modal" id="modal">
-            <!-- authen signin-->
-            <div class="auth-form">
-                <div class="auth-form__container">
-                    <div class="auth-form__header">
-                        <h3 class="auth-form__heading">Đăng Ký</h3>
-                        <div class="auth-form__switch-btn">Đăng nhập</div>
-                    </div>
-                    <div class="auth-form__form">
-                        <div class="auth-form__group">
-                            <input type="text" placeholder="Số điện thoại"
-                                class="auth-form__input">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" placeholder="Mật khẩu"
-                                class="auth-form__input">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password"
-                                placeholder="Nhập lại mật khẩu"
-                                class="auth-form__input">
-                        </div>
-                    </div>
-                    <div class="auth-form__policy">
-                        <p class="auth-form__policy-text">
-                            Bằng việc đăng ký, bạn đồng ý với Shoppee về
-                            <a href="#" class="auth-form__text-link">Điều khoản
-                                dịch vụ</a> &
-                            <a href="#" class="auth-form__text-link">Chính sách
-                                bảo mật</a>
-                        </p>
-                    </div>
-                    <div class="auth-form__control">
-                        <button class="btn auth-form__back">TRỞ LẠI</button>
-                        <button class="btn btn--primary">ĐĂNG KÝ</button>
-                    </div>
-                </div>
-                <div class="auth-form__signin">
-                    <a href="#" class="btn btn-signin auth-form__signin-fb">
-                        <i class="auth-form__signin-icon fab fa-facebook-square"></i>
-                        <p class="auth-form__signin-text">
-                            Kết nối với Facebook
-                        </p>
-                    </a>
-                    <a href="#" class="btn btn-signin auth-form__signin-gg">
-                        <i class="auth-form__signin-icon fab fa-google"></i>
-                        <p class="auth-form__signin-text">
-                            Kết nối với Google
-                        </p>
-                    </a>
-                </div>
-            </div>
+            <!-- <div class="modal__overlay"></div> -->
+            <div class="modal__body" id="modal__body">
+               <!-- authen signin-->
+            <div class="auth-form modal_form" id="modal_form-sigin">
+              <div class="auth-form__container">
+                  <div class="auth-form__header">
+                      <h3 class="auth-form__heading">Đăng Ký</h3>
+                      <div class="auth-form__switch-btn">Đăng nhập</div>
+                  </div>
+                  <div class="auth-form__form">
+                      <div class="auth-form__group">
+                          <input type="text" placeholder="Số điện thoại"
+                              class="auth-form__input">
+                      </div>
+                      <div class="auth-form__group">
+                          <input type="password" placeholder="Mật khẩu"
+                              class="auth-form__input">
+                      </div>
+                      <div class="auth-form__group">
+                          <input type="password"
+                              placeholder="Nhập lại mật khẩu"
+                              class="auth-form__input">
+                      </div>
+                  </div>
+                  <div class="auth-form__policy">
+                      <p class="auth-form__policy-text">
+                          Bằng việc đăng ký, bạn đồng ý với Shoppee về
+                          <a href="#" class="auth-form__text-link">Điều khoản
+                              dịch vụ</a> &
+                          <a href="#" class="auth-form__text-link">Chính sách
+                              bảo mật</a>
+                      </p>
+                  </div>
+                  <div class="auth-form__control">
+                      <button class="btn auth-form__back">TRỞ LẠI</button>
+                      <button class="btn btn--primary">ĐĂNG KÝ</button>
+                  </div>
+              </div>
+              <div class="auth-form__signin">
+                  <a href="#" class="btn btn-signin auth-form__signin-fb">
+                      <i class="auth-form__signin-icon fab fa-facebook-square"></i>
+                      <p class="auth-form__signin-text">
+                          Kết nối với Facebook
+                      </p>
+                  </a>
+                  <a href="#" class="btn btn-signin auth-form__signin-gg">
+                      <i class="auth-form__signin-icon fab fa-google"></i>
+                      <p class="auth-form__signin-text">
+                          Kết nối với Google
+                      </p>
+                  </a>
+              </div>
+          </div>
 
-            <!-- authen signin-->
-            <div class="auth-form">
-                <div class="auth-form__container">
-                    <div class="auth-form__header">
-                        <h3 class="auth-form__heading">Đăng Ký</h3>
-                        <div class="auth-form__switch-btn">Đăng nhập</div>
-                    </div>
-                    <div class="auth-form__form">
-                        <div class="auth-form__group">
-                            <input type="text" placeholder="Số điện thoại"
-                                class="auth-form__input">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" placeholder="Mật khẩu"
-                                class="auth-form__input">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password"
-                                placeholder="Nhập lại mật khẩu"
-                                class="auth-form__input">
-                        </div>
-                    </div>
-                    <div class="auth-form__policy">
-                        <p class="auth-form__policy-text">
-                            Bằng việc đăng ký, bạn đồng ý với Shoppee về
-                            <a href="#" class="auth-form__text-link">Điều khoản
-                                dịch vụ</a> &
-                            <a href="#" class="auth-form__text-link">Chính sách
-                                bảo mật</a>
-                        </p>
-                    </div>
-                    <div class="auth-form__control">
-                        <button class="btn auth-form__back">TRỞ LẠI</button>
-                        <button class="btn btn--primary">ĐĂNG KÝ</button>
-                    </div>
-                </div>
-                <div class="auth-form__signin">
-                    <a href="#" class="btn btn-signin auth-form__signin-fb">
-                        <i class="auth-form__signin-icon fab fa-facebook-square"></i>
-                        <p class="auth-form__signin-text">
-                            Kết nối với Facebook
-                        </p>
-                    </a>
-                    <a href="#" class="btn btn-signin auth-form__signin-gg">
-                        <i class="auth-form__signin-icon fab fa-google"></i>
-                        <p class="auth-form__signin-text">
-                            Kết nối với Google
-                        </p>
-                    </a>
-                </div>
+          <!-- authen login-->
+          <div class="auth-form  modal_form"  id="modal_form-login">
+              <div class="auth-form__container">
+                  <div class="auth-form__header">
+                      <h3 class="auth-form__heading">Đăng Nhập</h3>
+                      <div class="auth-form__switch-btn">Đăng ký</div>
+                  </div>
+                  <div class="auth-form__form">
+                      <div class="auth-form__group">
+                          <input type="text" placeholder="Số điện thoại" class="auth-form__input">
+                      </div>
+                      <div class="auth-form__group">
+                          <input type="password" placeholder="Mật khẩu" class="auth-form__input">
+                      </div>
+                  </div>
+                  <div class="auth-form__help">
+                      <a href="#" class="auth-form__help-link auth-form__help-forgot">Quên Mật Khẩu</a>
+                      <div class="auth-form__help--separate"></div>
+                      <a href="#" class="auth-form__help-link">Cần trợ giúp?</a>
+                  </div>
+                  <div class="auth-form__control">
+                      <button class="btn auth-form__back">TRỞ LẠI</button>
+                      <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                  </div>
+              </div>
+
+              <div class="auth-form__signin">
+                  <a href="#" class="btn btn-signin auth-form__signin-sms">
+                      <i class="auth-form__signin-icon fas fa-sms"></i>
+                      <p class="auth-form__signin-text">
+                          SMS
+                      </p>
+                  </a>
+                  <a href="#" class="btn btn-signin auth-form__signin-fb">
+                      <i class="auth-form__signin-icon fab fa-facebook-square"></i>
+                      <p class="auth-form__signin-text">
+                          Facebook
+                      </p>
+                  </a>
+                  <a href="#" class="btn btn-signin auth-form__signin-gg">
+                      <i class="auth-form__signin-icon fab fa-google"></i>
+                      <p class="auth-form__signin-text">
+                          Google
+                      </p>
+                  </a>
+              </div>
             </div>
-        </div>
+            </div>
+          </div>
 
         <!-- script js -->
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
         <script src="./assets/js/product.js"></script>
         <script src="assets/js/form.js"></script>
     </body>
