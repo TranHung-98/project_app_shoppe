@@ -106,6 +106,8 @@ function checkPageArrow() {
         }
     }
 }
+
+
 // 5. Xử Lý Phân Trang:
 function handlePagination() {
     var paginationItem = document.querySelectorAll('.pagination-item');
@@ -256,6 +258,9 @@ for (var i = 0; i < 2; i++) {
         shuffer();
     }
 }
+
+
+
 
 var homeFilterPage = document.querySelectorAll('.home-filter-page-btn');
 

@@ -357,7 +357,7 @@ border-color: red green blue yellow */
 }
 
 .auth-form__input:focus {
-    border-color: var(--primary-color);
+    border-color: #4992ff;
 }
 
 .auth-form__policy {
@@ -442,8 +442,6 @@ border-color: red green blue yellow */
     border: 1px solid var(--border-color);
     margin: 0 16px;
 }
-
-
 
 .header__contain {
     height: 86px;
