@@ -61,14 +61,14 @@ $(document).ready(function () {
       $('#re-password').css("border", "1px solid red");
     }
 
-    if (password !== re_Password) {
+    if (password_reg !==  re_password) {
       $('#repassword_error').text('Passwords do not match');
       $('#password-reg').css("border", "1px solid red");
       $('#re-password').css("border", "1px solid red");
       return;
     }
 
-    if (phone.trim() != "" && password_reg.trim() != "" && re_Password.trim() != "") {
+    if (phone_reg.trim() != "" && password_reg.trim() != "" && re_password.trim() != "") {
       $('#modal_form-sigin').css("display", "none");
       $('#modal_form-login').css("display", "block");
     }
