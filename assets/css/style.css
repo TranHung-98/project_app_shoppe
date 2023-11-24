@@ -326,12 +326,23 @@ border-color: red green blue yellow */
     padding: 12px 12px 0;
 }
 
+
+.auth-form__heading:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
 .auth-form__switch-btn {
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--primary-color);
     cursor: pointer;
     padding: 16px 0 0;
+}
+
+.auth-form__switch-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .auth-form__input {
