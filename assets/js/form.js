@@ -6,7 +6,7 @@ $(document).ready(function () {
   var click_reg = $('#click_register_user');
   var modal_sigin = $('#modal_form-sigin');
   var modal_reg = $('#modal_form-login');
-  var user_login = $('#user_login');
+  var logout= $('#logout');
 
 
   $(document).on('click', '#login_user', function (event) {
@@ -32,6 +32,13 @@ $(document).ready(function () {
     event.stopPropagation();
     modal_reg.css("display", "none");
     modal_sigin.css("display", "block");
+  });
+
+  $(document).on('click', '#logout', function (event) {
+    event.stopPropagation();
+    $('#user_login').hide();
+    click_login.show();
+    click_reg.show();
   });
 
 
