@@ -23,6 +23,8 @@
 }
 
 .header__nav-item {
+    color: #ffff;
+    font-size: 1.3rem;
     padding: 0 7px;
 }
 
