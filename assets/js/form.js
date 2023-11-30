@@ -6,6 +6,7 @@ $(document).ready(function () {
   var click_reg = $('#click_register_user');
   var modal_sigin = $('#modal_form-sigin');
   var modal_reg = $('#modal_form-login');
+  var user_login = $('#user_login');
 
 
   $(document).on('click', '#login_user', function (event) {
@@ -97,6 +98,10 @@ $(document).ready(function () {
 
     if (phone.trim() != "" && password.trim() != "") {
       modal.css("display", "none");
+
+    $('#click_login_user').css("display", "none");
+    $('#click_register_user').css("display", "none");
+    $('#user_login').show();
     }
   });
 
