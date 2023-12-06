@@ -259,9 +259,6 @@ for (var i = 0; i < 2; i++) {
     }
 }
 
-
-
-
 var homeFilterPage = document.querySelectorAll('.home-filter-page-btn');
 
 homeFilterPage[0].onclick = function() {

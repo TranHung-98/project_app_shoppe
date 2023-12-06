@@ -45,14 +45,23 @@ $(document).ready(function () {
   $('#form-register').submit(function (event) {
     event.preventDefault();
 
+    var email = $('#email').val();
     var phone_reg = $('#phone-reg').val();
     var password_reg = $('#password-reg').val();
     var re_password = $('#re-password').val();
 
-    $('#phone-error, #password-error,#repassword_error').text('');
+
+    $('#phone-error, #password-error,#repassword_error,#email').text('');
     $('#phone-reg').css("border", "1px solid #ccc");
+    $('#email').css("border", "1px solid #ccc");
     $('#password-reg').css("border", "1px solid #ccc");
     $('#re-password').css("border", "1px solid #ccc");
+
+    if(email === ''){
+      console.log("ok")
+      $('#email-errol').text('Email is required');
+      $('#email').css("border", "1px solid red");
+    }
 
     if (phone_reg === '') {
       $('#phone-error').text('Phone is required');
@@ -76,7 +85,7 @@ $(document).ready(function () {
       return;
     }
 
-    if (phone_reg.trim() != "" && password_reg.trim() != "" && re_password.trim() != "") {
+    if (phone_reg.trim() != "" && password_reg.trim() != "" && re_password.trim() != "" && email.trim() != '') {
       $('#modal_form-sigin').css("display", "none");
       $('#modal_form-login').css("display", "block");
     }
@@ -95,7 +104,7 @@ $(document).ready(function () {
     $('#password').css("border", "1px solid #ccc");
 
     if (phone === '') {
-      $('#phone_error').text('Phone is required');
+      $('#phone_error').text('Phone or Email is required');
       $('#phone').css("border", "1px solid red");
     }
     if (password === '') {
