@@ -84,6 +84,7 @@ function responsive() {
 
 function checkPageArrow() {
     var paginationLink = document.querySelectorAll('.pagination-item-link');
+    // Check if active page is 1
     if (document.querySelector('.pagination-item--active a').textContent == 1) {
         paginationLink[0].classList.add('pagination-item-link--disable');
         if (paginationLink[0].attributes.href) {
@@ -95,27 +96,27 @@ function checkPageArrow() {
             paginationLink[0].href = '#';
         }
     }
-    if (document.querySelector('.pagination-item--active a').textContent == 8) {
-        paginationLink[6].classList.add('pagination-item-link--disable');
-        if (paginationLink[6].attributes.href) {
-            paginationLink[6].attributes.removeNamedItem('href');
+
+    if (document.querySelector('.pagination-item--active a').textContent == 14) {
+        paginationLink[paginationLink.length - 1].classList.add('pagination-item-link--disable');
+        if (paginationLink[paginationLink.length - 1].attributes.href) {
+            paginationLink[paginationLink.length - 1].attributes.removeNamedItem('href');
         }
     } else {
-        paginationLink[6].classList.remove('pagination-item-link--disable');
-        if (!paginationLink[6].attributes.href) {
-            paginationLink[6].href = '#';
+        paginationLink[paginationLink.length - 1].classList.remove('pagination-item-link--disable');
+        if (!paginationLink[paginationLink.length - 1].attributes.href) {
+            paginationLink[paginationLink.length - 1].href = '#';
         }
     }
 }
 
-
-// 5. Xử Lý Phân Trang:
 function handlePagination() {
     var paginationItem = document.querySelectorAll('.pagination-item');
     var paginationLength = paginationItem.length;
     checkPageArrow();
+
     for (var i = 0; i < paginationLength; i++) {
-        if (i != 0 && i != 4 && i != paginationLength - 1) {
+        if (i != 0 && i != paginationLength - 1) {
             // handle active button
             var isActive = document.querySelector('.pagination-item--active a');
             if (isActive.attributes.href) {
@@ -125,13 +126,13 @@ function handlePagination() {
                 paginationItemLink[i].setAttribute('href', '#');
             }
             // handle other button
-            paginationItem[1].onclick = function() {
+            paginationItem[i].onclick = function () {
                 var content = this.querySelector('a').textContent;
                 var paginationItemLink = document.querySelectorAll('.pagination-item-link');
                 if (content >= 2) {
-                    paginationItemLink[1].textContent = Number(paginationItemLink[1].textContent) - 1;
-                    paginationItemLink[2].textContent = Number(paginationItemLink[2].textContent) - 1;
-                    paginationItemLink[3].textContent = Number(paginationItemLink[3].textContent) - 1;
+                    for (var j = 1; j <= 3; j++) {
+                        paginationItemLink[j].textContent = Number(paginationItemLink[j].textContent) - 1;
+                    }
                     document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
                     paginationItem[2].classList.add('pagination-item--active');
                     shuffer();
@@ -142,75 +143,36 @@ function handlePagination() {
                 }
                 checkPageArrow();
             }
-            paginationItem[2].onclick = function() {
-                document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
-                this.classList.add('pagination-item--active');
-                shuffer();
-                checkPageArrow();
-            }
-            paginationItem[3].onclick = function(e) {
-                var content = this.querySelector('a').textContent;
-                var paginationItemLink = document.querySelectorAll('.pagination-item-link');
-                if (content < 7) {
-                    paginationItemLink[1].textContent = Number(paginationItemLink[1].textContent) + 1;
-                    paginationItemLink[2].textContent = Number(paginationItemLink[2].textContent) + 1;
-                    paginationItemLink[3].textContent = Number(paginationItemLink[3].textContent) + 1;
-                    document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
-                    paginationItem[2].classList.add('pagination-item--active');
-                    shuffer();
-                }
-                if (content == 7) {
-                    document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
-                    this.classList.add('pagination-item--active');
-                    e.preventDefault();
-                }
-                checkPageArrow();
-            }
-            paginationItem[5].onclick = function(e) {
-                var content = document.querySelector('.pagination-item--active a').textContent;
-                if (content != 8) {
-                    var paginationItemLink = document.querySelectorAll('.pagination-item-link');
-                    document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
-                    this.classList.add('pagination-item--active');
-                    paginationItemLink[1].textContent = 5;
-                    paginationItemLink[2].textContent = 6;
-                    paginationItemLink[3].textContent = 7;
-                    shuffer();
-                    checkPageArrow();
-                } else {
-                    e.preventDefault();
-                }
-            }
         } else if (i == 0 || i == paginationLength - 1) {
             var paginationItemLink = document.querySelectorAll('.pagination-item-link');
             // arrow left
-            paginationItem[0].onclick = function() {
-                    if (document.querySelector('.pagination-item--active a').textContent == 8) {
-                        document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
-                        paginationItem[3].classList.add('pagination-item--active');
-                    } else if (document.querySelector('.pagination-item--active a').textContent == 2) {
-                        document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
-                        paginationItem[1].classList.add('pagination-item--active');
-                    } else if (document.querySelector('.pagination-item--active a').textContent > 1) {
-                        paginationItemLink[1].textContent = Number(paginationItemLink[1].textContent) - 1;
-                        paginationItemLink[2].textContent = Number(paginationItemLink[2].textContent) - 1;
-                        paginationItemLink[3].textContent = Number(paginationItemLink[3].textContent) - 1;
-                        shuffer();
-                    }
-                    checkPageArrow();
-                }
-                // arrow right
-            paginationItem[paginationLength - 1].onclick = function() {
-                if (document.querySelector('.pagination-item--active a').textContent == 7) {
+            paginationItem[0].onclick = function () {
+                if (document.querySelector('.pagination-item--active a').textContent == 14) {
                     document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
-                    paginationItem[5].classList.add('pagination-item--active');
+                    paginationItem[paginationLength - 3].classList.add('pagination-item--active');
+                } else if (document.querySelector('.pagination-item--active a').textContent == 2) {
+                    document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
+                    paginationItem[1].classList.add('pagination-item--active');
+                } else if (document.querySelector('.pagination-item--active a').textContent > 1) {
+                    for (var j = 1; j <= 3; j++) {
+                        paginationItemLink[j].textContent = Number(paginationItemLink[j].textContent) - 1;
+                    }
+                    shuffer();
+                }
+                checkPageArrow();
+            }
+            // arrow right
+            paginationItem[paginationLength - 1].onclick = function () {
+                if (document.querySelector('.pagination-item--active a').textContent == 13) {
+                    document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
+                    paginationItem[paginationLength - 2].classList.add('pagination-item--active');
                 } else if (document.querySelector('.pagination-item--active a').textContent == 1) {
                     document.querySelector('.pagination-item--active').classList.remove('pagination-item--active');
                     paginationItem[2].classList.add('pagination-item--active');
-                } else if (document.querySelector('.pagination-item--active a').textContent < 7) {
-                    paginationItemLink[1].textContent = Number(paginationItemLink[1].textContent) + 1;
-                    paginationItemLink[2].textContent = Number(paginationItemLink[2].textContent) + 1;
-                    paginationItemLink[3].textContent = Number(paginationItemLink[3].textContent) + 1;
+                } else if (document.querySelector('.pagination-item--active a').textContent < 13) {
+                    for (var j = 1; j <= 3; j++) {
+                        paginationItemLink[j].textContent = Number(paginationItemLink[j].textContent) + 1;
+                    }
                     shuffer();
                 }
                 checkPageArrow();
@@ -218,6 +180,17 @@ function handlePagination() {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 // catagory
 
