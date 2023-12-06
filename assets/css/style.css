@@ -706,7 +706,6 @@ border-color: red green blue yellow */
     margin-top: 12px;
     background-color: var(--white-color);
     width: 400px;
-    min-height: 220px;
     border-radius: 3px;
     box-shadow: 0 0 5px #999;
     z-index: 10;
@@ -731,7 +730,7 @@ border-color: red green blue yellow */
 
 .header__cart--no-cart .header__cart-icon:hover~.header__cart-list.no-cart,
 .header__cart--no-cart .header__cart-list.no-cart:hover {
-    display: flex;
+    display: block;
 }
 
 .header__no-cart-img {
@@ -1175,6 +1174,7 @@ border-color: red green blue yellow */
     color: var(--white-color);
     z-index: 1;
     opacity: 0;
+    cursor: pointer;
 }
 
 .home-product-item:hover .home-product-item-footer {

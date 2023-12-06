@@ -59,6 +59,7 @@ function renderItem(items) {
                         <div class="home-product-item__sale-off-label">GIẢM</div>
                     </div>
                 </div>
+                <button class="home-product-item-footer">Thêm vào giỏ hàng</button>
             </a>
         </div>`;
     })
