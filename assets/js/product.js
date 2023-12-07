@@ -20,13 +20,42 @@ function shuffer() {
         .then(handlePagination)
 }
 
+
+function sortDataUp() {
+    fetch(dataUrl)
+        .then(response => response.json())
+        .then(list => {
+            // Sắp xếp theo trường 'newPrice' từ nhỏ đến lớn
+            list = list.sort((a, b) => parseFloat(a.newPrice) - parseFloat(b.newPrice));
+            return list;
+        })
+        .then(renderItem)
+        .then(responsive)
+        .then(handlePagination)
+}
+
+
+function sortDataDown() {
+    fetch(dataUrl)
+        .then(response => response.json())
+        .then(list => {
+            // Sắp xếp theo trường 'newPrice' từ lớn đến nhỏ
+            list = list.sort((a, b) => parseFloat(b.newPrice) - parseFloat(a.newPrice));
+            return list;
+        })
+        .then(renderItem)
+        .then(responsive)
+        .then(handlePagination)
+}
+
+
 // 3. Hiển Thị Sản Phẩm:main product
 
 function renderItem(items) {
     var listProduct = document.getElementById('list-product');
-    var htmls = items.map(function(item) {
+    var htmls = items.map(function (item) {
         return `
-        <div data="${item.id}" class="col l-2-4 m-3 c-6 home-product-item">
+        <div data=" " class="col l-2-4 m-3 c-6 home-product-item">
             <a class="home-product-item-link" href="#">
                 <div class="home-product-item__img" style="background-image: url(./assets/img/home/${item.id}.PNG);"></div>
                 <div class="home-product-item__info">
@@ -182,22 +211,12 @@ function handlePagination() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 // catagory
 
 var headerCatagoryItem = document.querySelectorAll('.header__sort-item');
 
 for (var i = 0; i < 4; i++) {
-    headerCatagoryItem[i].onclick = function() {
+    headerCatagoryItem[i].onclick = function () {
         var headerCatagoryActive = document.querySelector('.header__sort-item--active');
         headerCatagoryActive.classList.remove('header__sort-item--active');
         this.classList.add('header__sort-item--active');
@@ -209,7 +228,7 @@ for (var i = 0; i < 4; i++) {
 var mobileCatagoryItem = document.querySelectorAll('.mobile-category-item');
 
 for (var i = 0; i < mobileCatagoryItem.length; i++) {
-    mobileCatagoryItem[i].onclick = function() {
+    mobileCatagoryItem[i].onclick = function () {
         shuffer();
     }
 }
@@ -217,7 +236,7 @@ for (var i = 0; i < mobileCatagoryItem.length; i++) {
 var homeFilter = document.querySelectorAll('.home-filter-btn');
 
 for (var i = 0; i < 3; i++) {
-    homeFilter[i].onclick = function() {
+    homeFilter[i].onclick = function () {
         var homeFilterActive = document.querySelector('.home-filter-btn.btn--primary');
         homeFilterActive.classList.remove('btn--primary');
         this.classList.add('btn--primary');
@@ -225,17 +244,20 @@ for (var i = 0; i < 3; i++) {
     }
 }
 
-var homeFilterSort = document.querySelectorAll('.home-filter-sort-item-link');
+var homeFilterSortDown = document.getElementById("sort_down");
+var homeFilterSortUp = document.getElementById("sort_up");
 
-for (var i = 0; i < 2; i++) {
-    homeFilterSort[i].onclick = function() {
-        shuffer();
-    }
+homeFilterSortDown.onclick = function () {
+    sortDataDown();
+}
+
+homeFilterSortUp.onclick = function () {
+    sortDataUp();
 }
 
 var homeFilterPage = document.querySelectorAll('.home-filter-page-btn');
 
-homeFilterPage[0].onclick = function() {
+homeFilterPage[0].onclick = function () {
     var currentPage = document.querySelector('.home-filter-page-now');
     if (currentPage.textContent != 1) {
         currentPage.textContent = Number(currentPage.textContent) - 1;
@@ -248,7 +270,7 @@ homeFilterPage[0].onclick = function() {
         homeFilterPage[0].classList.add('home-filter-page-btn--disable');
     }
 }
-homeFilterPage[1].onclick = function() {
+homeFilterPage[1].onclick = function () {
     var currentPage = document.querySelector('.home-filter-page-now');
     if (currentPage.textContent != 14) {
         currentPage.textContent = Number(currentPage.textContent) + 1;
