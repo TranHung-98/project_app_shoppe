@@ -7,47 +7,6 @@ fetch(dataUrl)
     .then(responsive)
     .then(handlePagination)
 
-// 2. Xáo Trộn Dữ Liệu:
-function shuffer() {
-    fetch(dataUrl)
-        .then(response => response.json())
-        .then(list => {
-            list = list.sort(() => Math.random() - 0.5)
-            return list;
-        })
-        .then(renderItem)
-        .then(responsive)
-        .then(handlePagination)
-}
-
-
-function sortDataUp() {
-    fetch(dataUrl)
-        .then(response => response.json())
-        .then(list => {
-            // Sắp xếp theo trường 'newPrice' từ nhỏ đến lớn
-            list = list.sort((a, b) => parseFloat(a.newPrice) - parseFloat(b.newPrice));
-            return list;
-        })
-        .then(renderItem)
-        .then(responsive)
-        .then(handlePagination)
-}
-
-
-function sortDataDown() {
-    fetch(dataUrl)
-        .then(response => response.json())
-        .then(list => {
-            // Sắp xếp theo trường 'newPrice' từ lớn đến nhỏ
-            list = list.sort((a, b) => parseFloat(b.newPrice) - parseFloat(a.newPrice));
-            return list;
-        })
-        .then(renderItem)
-        .then(responsive)
-        .then(handlePagination)
-}
-
 
 // 3. Hiển Thị Sản Phẩm:main product
 
@@ -55,7 +14,7 @@ function renderItem(items) {
     var listProduct = document.getElementById('list-product');
     var htmls = items.map(function (item) {
         return `
-        <div data=" " class="col l-2-4 m-3 c-6 home-product-item">
+        <div data="${item.id} " class="col l-2-4 m-3 c-6 home-product-item">
             <a class="home-product-item-link" href="#">
                 <div class="home-product-item__img" style="background-image: url(./assets/img/home/${item.id}.PNG);"></div>
                 <div class="home-product-item__info">
@@ -88,7 +47,7 @@ function renderItem(items) {
                         <div class="home-product-item__sale-off-label">GIẢM</div>
                     </div>
                 </div>
-                <button class="home-product-item-footer">Thêm vào giỏ hàng</button>
+                <button class="home-product-item-footer" onclick="addToCart()">Thêm vào giỏ hàng</button>
             </a>
         </div>`;
     })
@@ -233,53 +192,4 @@ for (var i = 0; i < mobileCatagoryItem.length; i++) {
     }
 }
 
-var homeFilter = document.querySelectorAll('.home-filter-btn');
 
-for (var i = 0; i < 3; i++) {
-    homeFilter[i].onclick = function () {
-        var homeFilterActive = document.querySelector('.home-filter-btn.btn--primary');
-        homeFilterActive.classList.remove('btn--primary');
-        this.classList.add('btn--primary');
-        shuffer();
-    }
-}
-
-var homeFilterSortDown = document.getElementById("sort_down");
-var homeFilterSortUp = document.getElementById("sort_up");
-
-homeFilterSortDown.onclick = function () {
-    sortDataDown();
-}
-
-homeFilterSortUp.onclick = function () {
-    sortDataUp();
-}
-
-var homeFilterPage = document.querySelectorAll('.home-filter-page-btn');
-
-homeFilterPage[0].onclick = function () {
-    var currentPage = document.querySelector('.home-filter-page-now');
-    if (currentPage.textContent != 1) {
-        currentPage.textContent = Number(currentPage.textContent) - 1;
-        shuffer();
-    }
-    if (currentPage.textContent != 14) {
-        homeFilterPage[1].classList.remove('home-filter-page-btn--disable');
-    }
-    if (currentPage.textContent == 1) {
-        homeFilterPage[0].classList.add('home-filter-page-btn--disable');
-    }
-}
-homeFilterPage[1].onclick = function () {
-    var currentPage = document.querySelector('.home-filter-page-now');
-    if (currentPage.textContent != 14) {
-        currentPage.textContent = Number(currentPage.textContent) + 1;
-        shuffer();
-    }
-    if (currentPage.textContent != 1) {
-        homeFilterPage[0].classList.remove('home-filter-page-btn--disable');
-    }
-    if (currentPage.textContent == 14) {
-        homeFilterPage[1].classList.add('home-filter-page-btn--disable');
-    }
-}
