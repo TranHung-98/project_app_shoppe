@@ -11,7 +11,6 @@ function shuffer() {
       .then(handlePagination)
 }
 
-
 function sortDataPriceUp() {
   fetch(dataUrl)
       .then(response => response.json())
@@ -24,7 +23,6 @@ function sortDataPriceUp() {
       .then(responsive)
       .then(handlePagination)
 }
-
 
 function sortDataPriceDown() {
   fetch(dataUrl)
@@ -39,18 +37,18 @@ function sortDataPriceDown() {
       .then(handlePagination)
 }
 
+// Bán chạy theo số lượng trường 'saled'
 function selling() {
-  fetch(dataUrl)
+    fetch(dataUrl)
       .then(response => response.json())
       .then(list => {
-          // Sắp xếp theo trường 'saled' từ lớn đến nhỏ
-          list = list.sort((a, b) => parseFloat(b.saled) - parseFloat(a.saled));
-          return list;
+        // Sắp xếp theo trường 'saled' từ lớn đến nhỏ
+        return list.sort((a, b) => parseFloat(b.saled) - parseFloat(a.saled));
       })
       .then(renderItem)
       .then(responsive)
       .then(handlePagination)
-}
+  }
 
 
 
@@ -66,9 +64,9 @@ for (var i = 0; i < 2; i++) {
     }
 }
 
-var selling = document.getElementById("saled");
+var saledFilter = document.getElementById("saled");
 
-selling.onclick = function(){
+saledFilter.onclick = function(){
     var homeFilterActive = document.querySelector('.home-filter-btn.btn--primary');
     homeFilterActive.classList.remove('btn--primary');
     this.classList.add('btn--primary');
@@ -112,5 +110,28 @@ homeFilterPage[1].onclick = function () {
     }
     if (currentPage.textContent == 14) {
         homeFilterPage[1].classList.add('home-filter-page-btn--disable');
+    }
+}
+
+
+// catagory
+
+var headerCatagoryItem = document.querySelectorAll('.header__sort-item');
+
+for (var i = 0; i < 4; i++) {
+    headerCatagoryItem[i].onclick = function () {
+        var headerCatagoryActive = document.querySelector('.header__sort-item--active');
+        headerCatagoryActive.classList.remove('header__sort-item--active');
+        this.classList.add('header__sort-item--active');
+        shuffer();
+    }
+
+}
+
+var mobileCatagoryItem = document.querySelectorAll('.mobile-category-item');
+
+for (var i = 0; i < mobileCatagoryItem.length; i++) {
+    mobileCatagoryItem[i].onclick = function () {
+        shuffer();
     }
 }

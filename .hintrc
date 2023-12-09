@@ -39,6 +39,14 @@
       }
     ],
     "highest-available-document-mode": "off",
-    "button-type": "off"
+    "button-type": "off",
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-active": "off"
+      }
+    ],
+    "disown-opener": "off",
+    "no-inline-styles": "off"
   }
 }

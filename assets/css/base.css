@@ -101,7 +101,7 @@ html {
     --growth-to: 1;
     border: 1px solid #888;
     z-index: 1;
-    top: 29%;
+    top: 20%;
     left: 34%;
     position: absolute;
     animation: growth linear 0.1s;

@@ -9,7 +9,6 @@ fetch(dataUrl)
 
 
 // 3. Hiển Thị Sản Phẩm:main product
-
 function renderItem(items) {
     var listProduct = document.getElementById('list-product');
     var htmls = items.map(function (item) {
@@ -53,6 +52,8 @@ function renderItem(items) {
     })
     listProduct.innerHTML = htmls.join('');
 }
+
+
 // 4. Điều Chỉnh Giao Diện Theo Kích Thước Màn Hình:
 function responsive() {
     var listItem = document.querySelectorAll('.home-product-item');
@@ -170,26 +171,5 @@ function handlePagination() {
 }
 
 
-// catagory
-
-var headerCatagoryItem = document.querySelectorAll('.header__sort-item');
-
-for (var i = 0; i < 4; i++) {
-    headerCatagoryItem[i].onclick = function () {
-        var headerCatagoryActive = document.querySelector('.header__sort-item--active');
-        headerCatagoryActive.classList.remove('header__sort-item--active');
-        this.classList.add('header__sort-item--active');
-        shuffer();
-    }
-
-}
-
-var mobileCatagoryItem = document.querySelectorAll('.mobile-category-item');
-
-for (var i = 0; i < mobileCatagoryItem.length; i++) {
-    mobileCatagoryItem[i].onclick = function () {
-        shuffer();
-    }
-}
 
 
