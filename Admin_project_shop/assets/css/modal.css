@@ -1,0 +1,80 @@
+.modal {
+  display: flex;
+  z-index: 50;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation: fadeIn linear 0.1s;
+}
+
+.modal-dialog {
+  left: 36%;
+  top: calc(30% - 140px);
+  --growth-from: 0.6;
+  --growth-to: 1;
+  position: absolute;
+  border: 1px solid #888;
+  z-index: 1;
+  animation: growth linear 0.3s;
+  border: none;
+  max-width: 80%;
+}
+
+.modal-content {
+  width: 500px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.modal-header {
+  display: flex;
+  color: #e9f2ff;
+  font-size: 1.6rem;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #5ba2e6;
+  justify-content: space-between;
+}
+
+.modal-body {
+  padding: 15px;
+}
+
+.form-group.form-group-w-100 {
+  width: 100%;
+}
+
+.eddit-from {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form-group {
+  width: 50%;
+  color: #6b6b6b;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+
+.btn.btn-primary.btn-m {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.modal-footer {
+  padding: 10px 0;
+  padding-left: 0;
+  padding-bottom: 15px;
+}
+
+
+

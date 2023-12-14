@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title> Admin Shopping</title>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/logo.png">
+
+		<!-- Font Awesome CSS -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+		<link href="assets/font-awesome/css/font-awesome.min.css" />
+
+		<!-- Custom CSS -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/admin.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/header__notifi.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/modal.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/progress.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/fix.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/reponsive.css" rel="stylesheet" type="text/css" />
+
+		<!-- END CSS for this page -->
+
+	</head>
+
+	<body>
+
+		<div id="main">
+
+			<!-- top bar navigation -->
+			<div class="headerbar">
+
+				<!-- LOGO -->
+				<div class="headerbar-left">
+					<a href="index.html" class="logo"><img alt="avatar"="Logo"
+							src="assets/images/logo.png" /> <span>Admin</span></a>
+				</div>
+
+				<nav class="navbar-custom">
+
+					<ul class="list-inline float-right ">
+
+						<li class="float-left">
+							<button class="button-menu-mobile open-left" id="button">
+								<i class="fa fa-fw fa-bars"></i>
+							</button>
+						</li>
+
+						<li class="list-inline-item ">
+
+							<div class="notif notif-mobile">
+								<a href="#" class="notif-pd notif-mail"><i class="fa-solid fa-envelope"></i>
+									<div class="header__email-count header__count-mobile">4</div>
+								</a>
+								<a href="#" class="notif-pd notif-help">
+									<i class="header__nav-icon far fa-question-circle"></i>
+									<span class="notif-mail_help">Hỗ trợ</span>
+								</a>
+								<button class="notif-pd notif-bell" id="button-bell" type="button"><i
+										class="fa-solid fa-bell"></i>
+									<div class="header__notifi-count">4</div>
+									<div class="header__notifi" id="notifi">
+										<header class="header__notifi-header">
+											<h3>Thông Báo Mới Nhận</h3>
+										</header>
+										<ul class="header__notifi-list">
+											<li class="header__notifi-item">
+												<a href="#" class="header__notifi-link">
+													<img src="../assets/img/sp/casio.png" class="header__notifi-img">
+													<div class="header__notifi-info">
+														<div class="header__notifi-name">
+															Casio fx 580 VN Plus
+														</div>
+														<div class="header__notifi-desc">
+															Mua Casio 580 của LTP
+															bao xịn, bao mượt, bao
+															đẹp
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="header__notifi-item">
+												<a href="#" class="header__notifi-link">
+													<img src="../assets/img/sp/casio.png" class="header__notifi-img">
+													<div class="header__notifi-info">
+														<div class="header__notifi-name">
+															Casio fx 580 VN Plus
+														</div>
+														<div class="header__notifi-desc">
+															Mua Casio 580 của LTP
+															bao xịn, bao mượt, bao
+															đẹp
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="header__notifi-item">
+												<a href="#" class="header__notifi-link">
+													<img src="../assets/img/sp/casio.png" class="header__notifi-img">
+													<div class="header__notifi-info">
+														<div class="header__notifi-name">
+															Casio fx 580 VN Plus
+														</div>
+														<div class="header__notifi-desc">
+															Mua Casio 580 của LTP
+															bao xịn, bao mượt, bao
+															đẹp
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+										<footer class="header__notifi-footer">
+											<a href="#" class="header__notifi-footer-btn">Xem
+												tất cả</a>
+										</footer>
+									</div>
+								</button>
+							</div>
+
+							<div class="dropdown-click dropdown">
+								<a class="nav-link dropdown-toggle nav-user" href="#">
+									<img src="assets/images/avatars/admin.png" alt="avatar"="Profile image"
+										class="avatar-rounded">
+								</a>
+								<div class="dropdown-menu dropdown-menu-before ">
+									<!-- item-->
+									<div class="noti-title">
+										<h5 class="text-overflow"><small>Administrators</small> </h5>
+									</div>
+									<div class="display-flex">
+
+										<!-- item-->
+										<button class="size border-none notify-item btn-login-sigin">
+											<i class="fa fa-power-off noti-icon"></i> <span>Logout</span>
+										</button>
+
+										<!-- item-->
+										<button class="size  dropdown-item notify-item btn-login-sigin">
+											<i class="fa fa-user noti-icon"></i> <span id="my-profile">Profile</span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</li>
+
+					</ul>
+
+				</nav>
+
+			</div>
+			<!-- End Navigation -->
+
+			<!-- Left Sidebar -->
+			<div class="left main-sidebar" id="leftscroll"></div>
+			<!-- End Sidebar -->
+
+			<div class="content-page">
+
+				<!-- Start content -->
+
+				<div class="content">
+
+					<div class="container-fluid">
+
+						<div class="row">
+							<div class="col-xl-12 header_profile">
+								<div class="breadcrumb-holder">
+									<h1 class="main-title float-left">Dashboard</h1>
+									<ul class="breadcrumb float-right">
+										<li class="breadcrumb-item">Home</li>
+										<li class="breadcrumb-item">/</li>
+										<li class="breadcrumb-item active">Dashboard</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end row -->
+
+						<div class="alert alert-danger" role="alert">
+							<h4 class="alert-heading">Info!</h4>
+							<p>Do you want custom development to integrate this theme in your
+								project? Or add new features? Contact us on <a target="_blank" href="#"><b>Trần
+										Hưng Admin Website</b></a></p>
+							<p>Or try our PRO version: <b>Save over 50 hours of development with our
+									Pro Framework: Registration / Login / Users Management, CMS, Front-End
+									Template (who will load contend added in admin area and saved in MySQL
+									database), Contact Messages Management, manage Website Settings and
+									many more, at an incredible price!</b></p>
+						</div>
+
+						<div class="row row-grap alert-danger mg-left-right-mobile pd-0 flex justify-content-center fix-bgr border-none">
+							<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card-box   pd-l flex bg-default">
+									<div class="group">
+										<h6 class="text-white text-uppercase ">Orders</h6>
+										<h1 class="  mg-top-left  text-white counter">1,587</h1>
+										<span class="text-white text-size">15 New Orders</span>
+									</div>
+									<i class="fa-solid fa-file-lines font-size mg-t text-white"></i>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card-box   pd-l flex bg-warning">
+									<div class="group">
+										<h6 class="text-white text-uppercase ">Visitors</h6>
+									<h1 class="  mg-top-left  text-white counter">250</h1>
+									<span class="text-white text-size">Bounce rate: 25%</span>
+									</div>
+									<i class="fa fa-bar-chart font-size mg-t text-white"></i>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card-box   flex pd-l  bg-info">
+									<div class="group">
+									<h6 class="text-white text-uppercase ">Users</h6>
+									<h1 class="  mg-top-left  text-white counter">120</h1>
+									<span class="text-white text-size">25 New Users</span>
+									</div>
+									<i class="fa-solid fa-user font-size mg-t text-white"></i>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card-box   pd-l flex bg-danger">
+									<div class="group">
+										<h6 class="text-white text-uppercase ">Alerts</h6>
+										<h1 class="  mg-top-left  text-white counter">58</h1>
+										<span class="text-white text-size">5 New Alerts</span>
+									</div>
+									<i class="fa-regular fa-bell font-size mg-t text-white"></i>
+								</div>
+							</div>
+						</div>
+						<!-- end row -->
+
+						<div class="row flex alert-danger reset-align-items fix-bgr pd-0 border-none">
+							<!-- Stars -->
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 width">
+								<div class="card  border  mg-b-t-xl table-responsive-xl">
+									<div class="card-header  bg-header pd">
+										<h3><i class="fa fa-line-chart"></i> Items Sold Amount</h3>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
+										luctus metus. Vivamus fermentum ultricies orci sit amet sollicitudin.
+									</div>
+									<div class="card-body bg-white"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+										<canvas id="lineChart" width="1101" height="550" style="display: block; height: 367px; width: 734px; outline: rgb(255, 0, 0) dashed 1px;"></canvas>
+									</div>
+									<div class="card-footer pd text-muted border-top">Updated yesterday at 11:59 PM</div>
+								</div><!-- end card-->
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 width">
+								<div class="card border table-responsive-xl mg">
+									<div class="card-header bg-header pd">
+										<h3><i class="fa fa-star-o"></i> Tasks progress</h3>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									</div>
+
+									<div class="card-body pd-bg flex flex-row bg-white">
+
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-xs bg-danger"
+												role="progressbar" style="width: 40%" aria-valuenow="40"
+												aria-valuemin="0" aria-valuemax="40"></div>
+										</div>
+										<p class="font-600 mg-l-r-n form-group-w-100">Task 8 <span class="text-danger pull-right"><b>40%</b></span></p>
+
+										<div class=""></div>
+
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-xs bg-danger"
+												role="progressbar" style="width: 55%" aria-valuenow="55"
+												aria-valuemin="0" aria-valuemax="55"></div>
+										</div>
+										<p class="font-600 mg-l-r-n form-group-w-100">Task 7 <span class="text-danger pull-right"><b>55%</b></span></p>
+
+										<div class=""></div>
+
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-xs bg-warning"
+												role="progressbar" style="width: 65%" aria-valuenow="65"
+												aria-valuemin="0" aria-valuemax="65"></div>
+										</div>
+										<p class="font-600 mg-l-r-n form-group-w-100">Task 6 <span class="text-warning pull-right"><b>65%</b></span></p>
+
+										<div class=""></div>
+
+
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-xs bg-warning"
+												role="progressbar" style="width: 68%" aria-valuenow="68"
+												aria-valuemin="0" aria-valuemax="68"></div>
+										</div>
+										<p class="font-600 mg-l-r-n form-group-w-100">Task 5 <span class="text-warning pull-right"><b>68%</b></span></p>
+
+										<div class=""></div>
+
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-xs bg-info"
+												role="progressbar" style="width: 70%" aria-valuenow="70"
+												aria-valuemin="0" aria-valuemax="70"></div>
+										</div>
+										<p class="font-600 mg-l-r-n form-group-w-100">Task 3 <span class="text-info pull-right"><b>70%</b></span></p>
+
+										<div class=""></div>
+
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-xs bg-info"
+												role="progressbar" style="width: 78%" aria-valuenow="75"
+												aria-valuemin="0" aria-valuemax="75"></div>
+										</div>
+										<p class="font-600 mg-l-r-n form-group-w-100">Task 4 <span class="text-info pull-right"><b>75%</b></span></p>
+
+										<div class=""></div>
+
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-xs bg-primary"
+												role="progressbar" style="width: 88%" aria-valuenow="88"
+												aria-valuemin="0" aria-valuemax="88"></div>
+										</div>
+										<p class="font-600 mg-l-r-n form-group-w-100">Task 2 <span class="text-primary pull-right"><b>88%</b></span></p>
+
+
+										<div class=""></div>
+
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-xs bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95"
+												aria-valuemin="0" aria-valuemax="95"></div>
+										</div>
+										<p class="font-600 mg-l-r-n mg-t-0 form-group-w-100" >Task 1 <span class="text-primary pull-right"><b>95%</b></span></p>
+
+									</div>
+									<div class="card-footer border-top pd small text-muted">Updated today at 11:59 PM</div>
+								</div><!-- end card-->
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 width">
+								<div class="card border">
+									<div class="card-header border-radius bg-header">
+										<h3><i class="fa-solid fa-envelope"></i> Latest messages</h3>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									</div>
+
+									<div class="card-body overflow nicescroll pd-bg bg-white">
+
+										<div class="widget-messages" style="height: 400px; overflow: hidden; outline: none;" tabindex="5000">
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img">
+														<img src="assets/images/avatars/avatar2.png" class="avatar-circle" alt="avatar">
+													</div>
+													<p class="message-item-user">John Doe</p>
+													<p class="message-item-msg">Hello. I want to buy your product</p>
+													<p class="message-item-date">11:50 PM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img
+															src="assets/images/avatars/avatar5.png" class="avatar-circle" alt="avatar"></div>
+													<p class="message-item-user">Ashton Cox</p>
+													<p class="message-item-msg">Great job for this task</p>
+													<p class="message-item-date">14:25 PM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img src="assets/images/avatars/avatar2.png" class="avatar-circle" alt="avatar"></div>
+													<p class="message-item-user">Colleen Hurst</p>
+													<p class="message-item-msg">I have a new project for you</p>
+													<p class="message-item-date">13:20 PM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img
+															src="assets/images/avatars/avatar10.png" class="avatar-circle"
+															alt></div>
+													<p class="message-item-user">Fiona Green</p>
+													<p class="message-item-msg">Nice to meet you</p>
+													<p class="message-item-date">15:45 PM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img
+															src="assets/images/avatars/avatar2.png" class="avatar-circle" alt="avatar"></div>
+													<p class="message-item-user">Donna Snider</p>
+													<p class="message-item-msg">I have a new project for you</p>
+													<p class="message-item-date">15:45 AM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img
+															src="assets/images/avatars/avatar5.png" class="avatar-circle" alt="avatar"></div>
+													<p class="message-item-user">Garrett Winters</p>
+													<p class="message-item-msg">I have a new project for you</p>
+													<p class="message-item-date">15:45 AM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img">
+														<img src="assets/images/avatars/avatar2.png" class="avatar-circle" alt="avatar">
+													</div>
+													<p class="message-item-user">John Doe</p>
+													<p class="message-item-msg">Hello. I want to buy your product</p>
+													<p class="message-item-date">11:50 PM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img
+															src="assets/images/avatars/avatar5.png" class="avatar-circle" alt="avatar"></div>
+													<p class="message-item-user">Ashton Cox</p>
+													<p class="message-item-msg">Great job for this task</p>
+													<p class="message-item-date">14:25 PM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img src="assets/images/avatars/avatar2.png" class="avatar-circle" alt="avatar"></div>
+													<p class="message-item-user">Colleen Hurst</p>
+													<p class="message-item-msg">I have a new project for you</p>
+													<p class="message-item-date">13:20 PM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img
+															src="assets/images/avatars/avatar10.png" class="avatar-circle"
+															alt></div>
+													<p class="message-item-user">Fiona Green</p>
+													<p class="message-item-msg">Nice to meet you</p>
+													<p class="message-item-date">15:45 PM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img
+															src="assets/images/avatars/avatar2.png" class="avatar-circle" alt="avatar"></div>
+													<p class="message-item-user">Donna Snider</p>
+													<p class="message-item-msg">I have a new project for you</p>
+													<p class="message-item-date">15:45 AM</p>
+												</div>
+											</a>
+											<a href="#">
+												<div class="message-item flex">
+													<div class="message-user-img"><img
+															src="assets/images/avatars/avatar5.png" class="avatar-circle" alt="avatar"></div>
+													<p class="message-item-user">Garrett Winters</p>
+													<p class="message-item-msg">I have a new project for you</p>
+													<p class="message-item-date">15:45 AM</p>
+												</div>
+											</a>
+										</div>
+
+									</div>
+									<div class="card-footer small text-muted pd border-top">Updated today at 11:59 PM</div>
+								</div><!-- end card-->
+							</div>
+							<!-- End -->
+						</div>
+
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 form-group-w-100">
+								<div class="card  alert-danger fix-bgr  border-none mg-b-t-xl">
+									<div class="card-header bg-header pd-bg border ">
+										<h3><i class="fa fa-users"></i> Staff details</h3>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
+										luctus metus. Vivamus fermentum ultricies orci sit amet sollicitudin.
+									</div>
+									<div class="card-body form-group-w-100">
+										<div id="example1_wrapper" class=" container-fluid form-group-w-100 bg-white pd-l">
+											<div class="row form-group-w-100  flex"><div class="col-sm-12 col-md-6">
+												<div class="dataTables_length " id="example1_length">
+													<span class="">Show entries:</span>
+														<label class="">
+														<select name="example1_length" aria-controls="example1" class="form-control form-control-xl">
+														<option value="10">10</option>
+														<option value="25">25</option>
+														<option value="50">50</option>
+														<option value="100">100</option>
+													</select>
+												</label>
+											</div>
+												</div>
+												<div class="col-sm-12 col-md-6">
+													<div id="example1_filter" class="dataTables_filter">
+														<label>Search:<input type="search" class="form-control form-control-sm" placeholder="Sreach" 	aria-controls="example1">
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="row ">
+												<div class="col-sm-12 table-responsive-xl">
+													<table id="example1" class="table table-bordered table-responsive-xl table-hover display dataTable no-footer">
+														<thead>
+															<tr role="row">
+																<th class="sorting_asc" tabindex="0"	aria-controls="example1" rowspan="1" colspan="1"	aria-sort="ascending"
+																	aria-label="Name: activate to sort column descending" 	style="width: 86.3333px;">Name</th>
+																	<th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending"
+																	style="width: 149.333px;">Position</th>
+																	<th class="sorting"
+																	tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+																	aria-label="Office: activate to sort column ascending"
+																	style="width: 64.3333px;">Office</th><th class="sorting"
+																	tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+																	aria-label="Age: activate to sort column ascending"
+																	style="width: 26.3333px;">Age</th><th class="sorting"
+																	tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+																	aria-label="Start date: activate to sort column ascending"
+																	style="width: 64.3333px;">Start date</th><th class="sorting"
+																	tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+																	aria-label="Salary: activate to sort column ascending"
+																	style="width: 42px;">Salary</th></tr>
+														</thead>
+														<tbody>
+															<tr role="row" class="odd">
+																<td class="sorting_1">Airi Satou</td>
+																<td>Accountant</td>
+																<td>Tokyo</td>
+																<td>33</td>
+																<td>2008/11/28</td>
+																<td>$162,700</td>
+															</tr><tr role="row" class="even">
+																<td class="sorting_1">Ashton Cox</td>
+																<td>Junior Technical Author</td>
+																<td>San Francisco</td>
+																<td>66</td>
+																<td>2009/01/12</td>
+																<td>$86,000</td>
+															</tr><tr role="row" class="odd">
+																<td class="sorting_1">Brielle Williamson</td>
+																<td>Integration Specialist</td>
+																<td>New York</td>
+																<td>61</td>
+																<td>2012/12/02</td>
+																<td>$372,000</td>
+															</tr><tr role="row" class="even">
+																<td class="sorting_1">Cedric Kelly</td>
+																<td>Senior Javascript Developer</td>
+																<td>Edinburgh</td>
+																<td>22</td>
+																<td>2012/03/29</td>
+																<td>$433,060</td>
+															</tr><tr role="row" class="odd">
+																<td class="sorting_1">Colleen Hurst</td>
+																<td>Javascript Developer</td>
+																<td>San Francisco</td>
+																<td>39</td>
+																<td>2009/09/15</td>
+																<td>$205,500</td>
+															</tr><tr role="row" class="even">
+																<td class="sorting_1">Donna Snider</td>
+																<td>Customer Support</td>
+																<td>New York</td>
+																<td>27</td>
+																<td>2011/01/25</td>
+																<td>$112,000</td>
+															</tr><tr role="row" class="odd">
+																<td class="sorting_1">Fiona Green</td>
+																<td>Chief Operating Officer (COO)</td>
+																<td>San Francisco</td>
+																<td>48</td>
+																<td>2010/03/11</td>
+																<td>$850,000</td>
+															</tr><tr role="row" class="even">
+																<td class="sorting_1">Garrett Winters</td>
+																<td>Accountant</td>
+																<td>Tokyo</td>
+																<td>63</td>
+																<td>2011/07/25</td>
+																<td>$170,750</td>
+															</tr><tr role="row" class="odd">
+																<td class="sorting_1">Herrod Chandler</td>
+																<td>Sales Assistant</td>
+																<td>San Francisco</td>
+																<td>59</td>
+																<td>2012/08/06</td>
+																<td>$137,500</td>
+															</tr><tr role="row" class="even">
+																<td class="sorting_1">Jena Gaines</td>
+																<td>Office Manager</td>
+																<td>London</td>
+																<td>30</td>
+																<td>2008/12/19</td>
+																<td>$90,560</td>
+															</tr></tbody>
+													</table>
+												</div>
+											</div>
+											<div class="row flex pd-t-xl">
+												<div class="col-sm-12 col-md-5">
+													<div class="dataTables_info" id="example1_info" role="status"
+														aria-live="polite">Showing 1 to 10 of 18 entries
+													</div>
+												</div>
+												<div class="col-sm-12 col-md-7">
+													<div class="border" id="example1_paginate">
+														<ul class="pagination flex ">
+															<li class="paginate_button page-item previous disabled pd-sm border-right " id="example1_previous">
+																<a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link text-muted">Previous</a>
+															</li>
+															<li class="paginate_button page-item active pd-sm border-right bg-primary">
+																<a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link text-white">1</a>
+															</li>
+															<li class="paginate_button page-item pd-sm border-right">
+																<a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+															</li>
+															<li class="paginate_button page-item next pd-sm" id="example1_next">
+																<a 	href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">Next</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- end card-->
+							</div>
+
+						</div>
+
+						<!-- end row -->
+
+					</div>
+					<!-- END container-fluid -->
+
+				</div>
+
+				<div id="content-page"></div>
+
+				<!-- END content -->
+
+			</div>
+			<!-- END content-page -->
+
+			<footer class="footer">
+				<span class="text-right"> Copyright Belongs To <a target="_blank" href="#">
+						Trần Hưng</a> Website</span>
+				<span class>Powered By <a target="_blank" href="#"><b>Admin Trần Hưng</b></a>
+				</span>
+			</footer>
+
+		</div>
+		<!-- END main -->
+
+		<!-- Start Modal -->
+
+		<div class="modal" id="modal">
+			<div id="modal_edit_user_1"></div>
+			<div id="modal_edit_user_2"></div>
+		</div>
+
+		<!-- END Modal-->
+
+		<!-- App js -->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+		<script src="assets/js/hande.js"></script>
+		<script src="assets/js/ajax.js"></script>
+		<script>
+			var isButtonClicked = false;
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('admin-click')) {
+        e.stopPropagation();
+
+        if (isButtonClicked) {
+            // Reset styles to their original values
+            document.querySelector('.subdrop').classList.remove('subdrop').classList.add('pro');
+            document.querySelector('.admin-list').style.display = 'none';
+        } else {
+            document.querySelector('.admin-list').style.display = 'block';
+            document.querySelector('.pro').classList.add('subdrop');
+        }
+
+        isButtonClicked = !isButtonClicked;
+    }
+});
+
+		</script>
+
+		<!-- BEGIN Java Script for this page -->
+
+	</body>
+</html>

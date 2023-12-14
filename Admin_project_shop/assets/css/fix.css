@@ -1,0 +1,222 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-responsive-xl  {
+  overflow: auto;
+}
+
+.fix-bgr {
+  background-color: transparent;
+}
+
+.border-none {
+  border: none;
+}
+
+.border {
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.border-right {
+  border-right:  1px solid rgba(0,0,0,.125);
+}
+
+.border-top {
+  border-top:1px solid rgba(0,0,0,.125);
+}
+
+.pd {
+  padding: 10px 15px;
+}
+
+.pd-sm {
+  padding: 5px 10px;
+}
+
+.pd-m{
+  padding: 15px 20px;
+}
+
+.pd-bg {
+  padding: 20px 30px;
+}
+
+.pd-bg-l{
+  padding: 50px;
+}
+
+.pd-l{
+  padding: 20px;
+}
+
+.width {
+  width: calc(100% / 3);
+}
+
+.width-4 {
+  width: calc(100% / 4);
+}
+
+.pd-bt-0 {
+  padding-bottom: 0;
+}
+
+.pd-t-l {
+  padding-top: 15px;
+}
+
+.pd-t-xl {
+  padding-top: 35px;
+}
+
+.pd-t-xll {
+  padding-top: 45px;
+}
+
+.pd-l-n {
+  padding-right: 0;
+}
+
+.pd-0 {
+  padding: 0;
+}
+
+.mg-l-r-n {
+  margin:  10px 0;
+}
+
+.mg-t {
+  margin-top: 20px;
+}
+
+.mg-top-left {
+ margin: 5px 0;
+}
+
+.mg {
+  margin: 0 20px;
+}
+
+.mg-b-t {
+  margin:  25px 0;
+}
+
+.mg-b-t-xl {
+  margin:  35px 0;
+}
+
+.mg-l {
+  margin-left: 30px;
+}
+
+.mg-r {
+  margin-right:  5px;
+}
+
+.mg-t-0 {
+  margin-top: 0;
+}
+
+.display-right {
+  float: right;
+}
+
+.form-group-w-100 {
+  width: 100%;
+}
+
+.form-control-xl {
+  width: 230px;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.btn-login-sigin {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #0f9df7;
+  background-color: transparent;
+  border-bottom: 1px solid #0f9df7;
+}
+
+.btn.btn-primary.btn-m {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+button.close {
+  border: none;
+  font-size: 1.2rem;
+  color: #e9f2ff;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+:hover,::after,::before {
+  box-sizing: border-box !important;
+}
+
+.notif-pd  {
+  padding: 0 10px;
+}
+
+.btn.btn-primary.btn-sm{
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.btn-danger.btn-sm.btn {
+  background-color: #ff5d48;
+  border-color: #ff5d48;
+}
+
+.flex-size {
+  width: 250px;
+}
+
+.font-size {
+  font-size: 5rem;
+}
+
+.text-uppercase{
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.text-size {
+  font-size: 0.9rem;
+}
+
+.flex-row {
+  flex-direction: column-reverse;
+}
+
+.reset-align-items {
+  align-items: baseline;
+}
+
+.pull-right {
+  float: right;
+}
+
+.overflow {
+  overflow: auto;
+}
+
+.nicescroll {
+  height: 400px;
+}
+
+.border-radius {
+  border-radius: 5px;
+}

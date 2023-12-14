@@ -272,7 +272,7 @@ border-color: red green blue yellow */
 
 .header__notifi-list {
   max-height: 450px;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-left: 0;
 }
 
